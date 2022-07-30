@@ -1,0 +1,142 @@
+.cart {
+  border: 2px solid rgba(var(--color-grey-20), 1);
+  border-radius: 6px;
+}
+.cartHeader {
+  width: 365px;
+  height: 65px;
+  background-color: rgba(var(--color-green), 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.cartHeader > h2 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: rgba(var(--color-white), 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.emptyCartBox {
+  width: 365px;
+  min-height: 158px;
+  max-height: 330px;
+  border-radius: 0 0 5px 5px;
+  background-color: rgba(var(--color-grey-0), 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyCartBox h2 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: rgba(var(--color-grey-100), 1);
+}
+
+.emptyCartBox > p {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: rgba(var(--color-grey-50), 1);
+}
+
+.cartBox {
+  width: 365px;
+  min-height: 158px;
+  max-height: 330px;
+  border-radius: 0 0 5px 5px;
+  background-color: rgba(var(--color-grey-0), 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 10px;
+  overflow-y: scroll;
+}
+
+.cartBox::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cartBox::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--color-grey-50), 1);
+  border-radius: 10px;
+}
+
+.cartBox > h2 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: rgba(var(--color-grey-100), 1);
+}
+
+.cartBox > p {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: rgba(var(--color-grey-50), 1);
+}
+
+.itemInCart {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(var(--color-grey-20), 1);
+  border-radius: 5px;
+}
+
+.itemInCart:hover,
+.itemInCart:focus {
+  background-color: rgba(var(--color-white), 1);
+}
+
+.imageBox {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(var(--color-grey-20), 1);
+  border-radius: 2px;
+}
+
+.imageBox > img {
+  height: 100%;
+}
+
+.description {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.config {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  background-color: transparent;
+}
+
+.config > button {
+  background-color: transparent;
+}

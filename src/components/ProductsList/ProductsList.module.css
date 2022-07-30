@@ -1,0 +1,32 @@
+.mainContainer {
+  max-width: 1400px;
+}
+
+.loadingMessage {
+  font-size: 1.75rem;
+  color: rgba(var(--color-grey-100), 1);
+}
+
+.productsList {
+  width: 100%;
+  max-width: 940px;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.productCard {
+  width: 30%;
+  min-width: 15.625rem;
+  height: 346px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: rgba(var(--color-white), 1);
+  border: 2px solid rgba(var(--color-grey-20), 1);
+  border-radius: 5px;
+}
