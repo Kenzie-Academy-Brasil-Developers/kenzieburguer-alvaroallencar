@@ -1,7 +1,15 @@
 import styled from "./Product.module.css";
 import { FaCartPlus } from "react-icons/fa";
+// import { useEffect, useState } from "react";
 
-const Product = ({ burguersList, burguer, cartList, setCartList }) => {
+const Product = ({
+  burguersList,
+  burguer,
+  cartList,
+  setCartList,
+  cartTotal,
+  setCartTotal,
+}) => {
   const priceFormated = new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL",
