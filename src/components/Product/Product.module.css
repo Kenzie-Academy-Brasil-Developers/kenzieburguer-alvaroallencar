@@ -4,11 +4,16 @@
   text-align: center;
   background-color: rgba(var(--color-grey-0), 1);
   border-radius: 3px 3px 0 0;
+  transition: 0.4s;
+}
+
+.imageBox:hover, .imageBox:focus {
+  transform: scale(1.2);
 }
 
 .imageBox > img {
   height: 100%;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
 .description {
@@ -55,4 +60,11 @@
   background-color: rgba(var(--color-green), 1);
   border: 2px solid rgba(var(--color-green), 1);
   border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.addToCart:hover, .addToCart:focus {
+  background-color: rgba(var(--color-green), 0.8);
+  border: 2px solid rgba(var(--color-green), 0.8);
 }

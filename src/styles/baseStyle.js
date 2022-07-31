@@ -5,9 +5,9 @@ const BaseStyle = createGlobalStyle`
 
     // Primary palette:
 
-    --color-green: 39, 174, 96;
-    --color-green-light: 147, 215, 175;
-    --color-red-light: 235, 87, 87;
+    --color-green: 107,142,35;
+    --color-green-light: 32,178,170;
+    --color-red-light: 178,34,34;
 
     // Grey scale palette:
 
