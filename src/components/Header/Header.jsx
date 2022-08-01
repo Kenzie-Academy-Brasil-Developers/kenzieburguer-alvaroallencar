@@ -26,8 +26,8 @@ const Header = ({
     <header className={styled.header}>
       <div className={styled.container}>
         <motion.div
-          initial={{ x: -100 }}
-          animate={{ x: 0 }}
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
           <img src={BurguerKenzie} alt="Burguer Kenzie" />
