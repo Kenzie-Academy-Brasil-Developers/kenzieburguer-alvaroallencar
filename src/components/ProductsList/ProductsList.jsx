@@ -9,7 +9,7 @@ const ProductsList = ({
   setCartList,
   isSearching,
 }) => {
-  return burguersListToRender.length > 0 ? (
+  return burguersListToRender.length > 0 && isSearching ? (
     <>
       <section className={styled.mainContainer}>
         <motion.ul
@@ -36,7 +36,7 @@ const ProductsList = ({
         </motion.ul>
       </section>
     </>
-  ) : isSearching === false ? (
+  ) : (
     <>
       <section className={styled.mainContainer}>
         <h2 className={styled.loadingMessage}>
@@ -44,9 +44,10 @@ const ProductsList = ({
         </h2>
       </section>
     </>
-  ) : (
-    <></>
   );
+  // : (
+  //   <ul className={styled.productsList}></ul>
+  // );
 };
 
 export default ProductsList;

@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     setBurguersListToRender(filteredBurguersList);
-    setIsSearching(!isSearching);
+    setIsSearching(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filteredBurguersList]);
 
