@@ -1,4 +1,5 @@
 import Product from "../Product/Product";
+import { motion } from "framer-motion";
 
 import styled from "./ProductsList.module.css";
 
@@ -11,7 +12,12 @@ const ProductsList = ({
   return burguersListToRender.length > 0 ? (
     <>
       <section className={styled.mainContainer}>
-        <ul className={styled.productsList}>
+        <motion.ul
+          className={styled.productsList}
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.7 }}
+        >
           {burguersListToRender.map((burguer) => {
             return (
               <li
@@ -27,15 +33,19 @@ const ProductsList = ({
               </li>
             );
           })}
-        </ul>
+        </motion.ul>
+      </section>
+    </>
+  ) : isSearching === false ? (
+    <>
+      <section className={styled.mainContainer}>
+        <h2 className={styled.loadingMessage}>
+          Nada encontrado para esta pesquisa :(
+        </h2>
       </section>
     </>
   ) : (
-    <>
-      <section className={styled.mainContainer}>
-        <h2 className={styled.loadingMessage}>Nada encontrado para esta pesquisa :(</h2>
-      </section>
-    </>
+    <></>
   );
 };
 

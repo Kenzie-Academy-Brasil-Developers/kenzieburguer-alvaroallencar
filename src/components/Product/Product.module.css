@@ -64,7 +64,7 @@
   cursor: pointer;
 }
 
-.addToCart:hover, .addToCart:focus {
+.addToCart:hover {
   background-color: rgba(var(--color-green), 0.8);
   border: 2px solid rgba(var(--color-green), 0.8);
 }

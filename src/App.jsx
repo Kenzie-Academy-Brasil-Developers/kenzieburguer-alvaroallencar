@@ -4,6 +4,7 @@ import Cart from "./components/Cart/Cart";
 import apiRequests from "./services/apiRequests";
 import { useState, useEffect } from "react";
 import { VscLoading } from "react-icons/vsc";
+import { motion } from "framer-motion";
 
 import BurguerKenzie from "../src/assets/img/BurguerKenzie.svg";
 
@@ -66,7 +67,12 @@ function App() {
   }, [cartList]);
 
   return (
-    <div className={styled.kenzieBurguerPage}>
+    <motion.div
+      className={styled.kenzieBurguerPage}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+    >
       <BaseStyle />
       <GlobalStyle />
       {burguersList.length > 0 ? (
@@ -89,14 +95,19 @@ function App() {
               cartTotal={cartTotal}
               setCartTotal={setCartTotal}
             />
-            <aside className={styled.cart}>
+            <motion.aside
+              className={styled.cart}
+              initial={{ x: 100 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 0.7 }}
+            >
               <Cart
                 cartList={cartList}
                 setCartList={setCartList}
                 cartTotal={cartTotal}
                 setCartTotal={setCartTotal}
               />
-            </aside>
+            </motion.aside>
           </main>
         </>
       ) : (
@@ -104,7 +115,7 @@ function App() {
           <VscLoading />{" "}
         </h2>
       )}
-    </div>
+    </motion.div>
   );
 }
 

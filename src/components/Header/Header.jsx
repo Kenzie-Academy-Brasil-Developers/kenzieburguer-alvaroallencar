@@ -1,6 +1,7 @@
 import styled from "./Header.module.css";
 import { GoSearch } from "react-icons/go";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Header = ({
   BurguerKenzie,
@@ -24,13 +25,20 @@ const Header = ({
   return (
     <header className={styled.header}>
       <div className={styled.container}>
-        <div>
+        <motion.div
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.7 }}
+        >
           <img src={BurguerKenzie} alt="Burguer Kenzie" />
-        </div>
-        <form
+        </motion.div>
+        <motion.form
           action="#"
           className={styled.searchForm}
           onSubmit={(e) => e.preventDefault()}
+          initial={{ x: 100 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.7 }}
         >
           <input
             type="text"
@@ -41,7 +49,7 @@ const Header = ({
           <button type="submit">
             <GoSearch className={styled.GoSearchColor} />
           </button>
-        </form>
+        </motion.form>
       </div>
     </header>
   );
