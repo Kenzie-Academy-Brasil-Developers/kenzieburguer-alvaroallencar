@@ -31,12 +31,6 @@
   top: 45vh;
 }
 
-@media screen and (max-width: 600px) {
-  .kenzieBurguerPage {
-    padding: 5px;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -46,6 +40,18 @@
   .loadingMessage {
     font-size: 4rem;
     left: 45vw;
+    top: 45vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .kenzieBurguerPage {
+    padding: 5px;
+  }
+
+  .loadingMessage {
+    font-size: 4rem;
+    left: 43vw;
     top: 45vh;
   }
 }
